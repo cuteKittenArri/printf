@@ -1,8 +1,9 @@
+#include "printf.h"
 
-static int	ft_intlen(int n);
+static int	ft_intlen(long n);
 static char	*ft_strdup(const char *s);
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long n)
 {
 	int		i;
 	int		minus;
@@ -19,7 +20,7 @@ char	*ft_itoa(int n)
 	i = ft_intlen(n);
 	istr = malloc(i + minus + 1);
 	if (!istr)
-		return (NULL);
+		return (0);
 	istr[i + minus] = '\0';
 	while (--i + minus >= 0)
 	{
@@ -31,7 +32,7 @@ char	*ft_itoa(int n)
 	return (istr);
 }
 
-static int	ft_intlen(int n)
+static int	ft_intlen(long n)
 {
 	int	i;
 
