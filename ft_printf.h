@@ -9,8 +9,8 @@
 int		ft_printf(char const *str, ...);
 int		ft_putchar(char c);
 int		ft_putnbr(int nbr);
-// int		ft_puthexa(unsigned long nbr, char up);
-// int		ft_putptr(void *ptr);
+int		ft_put_hex(unsigned int nbr, char up);
+int		ft_putptr(void *ptr);
 int		ft_putstr(char *s);
 char	*ft_itoa(int n);
 

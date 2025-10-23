@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lib_functions.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/23 20:36:45 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/23 20:36:45 by stmuller         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "printf.h"
 
 static int	ft_intlen(long n);
 static char	*ft_strdup(const char *s);
+static size_t	ft_strlen(const char *str);
 
 char	*ft_itoa(long n)
 {
@@ -62,4 +75,14 @@ static char	*ft_strdup(const char *s)
 	}
 	s2[i] = '\0';
 	return (s2);
+}
+
+static size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

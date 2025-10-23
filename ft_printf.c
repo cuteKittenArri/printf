@@ -11,7 +11,7 @@ static int	checker(const char toCheck, va_list args)
 	else if (toCheck == 's')
 		return (ft_putstr(va_arg(args, char *)));
 	else if (toCheck == 'x' || toCheck == 'X')
-		return (ft_putnbr_hexa(va_arg(args, unsigned int), toCheck));
+		return (ft_put_hex(va_arg(args, unsigned int), toCheck));
 	else if (toCheck == 'p')
 		return (ft_putptr(va_arg(args, void *)));
 	else if (toCheck == '%')
