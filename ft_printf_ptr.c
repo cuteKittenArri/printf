@@ -6,11 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 20:33:23 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/23 20:35:05 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/23 20:50:04 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static size_t	ptr_digits(unsigned long long n)
 {
@@ -36,7 +36,7 @@ static void	put_ptr(unsigned long long addr)
 	write(1, &digits[addr % 16], 1);
 }
 
-int	prt_ptr(void *addr)
+int	ft_put_ptr(void *addr)
 {
 	if (addr == 0)
 		return (write(1, "(nil)", 5));

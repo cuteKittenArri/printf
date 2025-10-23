@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
+#include <stdlib.h>
 
 static int	ft_intlen(long n);
 static char	*ft_strdup(const char *s);

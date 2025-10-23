@@ -1,9 +1,9 @@
-
 NAME := libftprintf.a
 CC := cc
 CFLAGS := -Wall -Werror -Wextra
-CFILES := ft_printf.c ft_printf_functions.c ft_lib_functions.c
+CFILES := ft_printf.c ft_printf_functions.c ft_lib_functions.c ft_printf_ptr.c ft_printf_hex.c
 OFILES := $(CFILES:.c=.o)
+HEAD := ft_printf.h
 
 all: $(NAME)
 
