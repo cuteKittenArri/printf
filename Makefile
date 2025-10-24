@@ -7,7 +7,7 @@ HEAD := ft_printf.h
 
 all: $(NAME)
 
-$(NAME): $(OFILES)
+$(NAME): $(OFILES) $(HEAD)
 	ar rcs $(NAME) $(OFILES)
 
 clean:
