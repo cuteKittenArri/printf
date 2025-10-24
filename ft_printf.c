@@ -13,14 +13,26 @@
 #include "ft_printf.h"
 
 static int	checker(const char toCheck, va_list args);
+int	ft_printf_striter(const char *str, va_list args);
 
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int		len;
-	int		check;
 
+	if (!str)
+		return (-1);
 	va_start(args, str);
+	len = ft_printf_striter(str, args);
+	va_end(args);
+	return (len);
+}
+
+int	ft_printf_striter(const char *str, va_list args)
+{
+	int	len;
+	int	check;
+
 	len = 0;
 	while (*str)
 	{
@@ -39,7 +51,6 @@ int	ft_printf(const char *str, ...)
 		}
 		str++;
 	}
-	va_end(args);
 	return (len);
 }
 
