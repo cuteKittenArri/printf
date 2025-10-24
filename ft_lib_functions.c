@@ -13,8 +13,8 @@
 #include "ft_printf.h"
 #include <stdlib.h>
 
-static int	ft_intlen(long n);
-static char	*ft_strdup(const char *s);
+static int		ft_intlen(long n);
+static char		*ft_strdup(const char *s);
 static size_t	ft_strlen(const char *str);
 
 char	*ft_itoa(long n)
@@ -60,6 +60,7 @@ static int	ft_intlen(long n)
 	}
 	return (i);
 }
+
 static char	*ft_strdup(const char *s)
 {
 	int		i;

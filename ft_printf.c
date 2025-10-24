@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/24 21:04:56 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/24 21:04:56 by stmuller         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	checker(const char toCheck, va_list args);
 
 int	ft_printf(const char *str, ...)
 {
-	va_list args;
+	va_list	args;
 	int		len;
 	int		check;
 
@@ -14,15 +26,14 @@ int	ft_printf(const char *str, ...)
 	{
 		if (*str == '%')
 		{
-			check =  checker(*(++str), args);
+			check = checker(*(++str), args);
 			if (check == -1)
 				return (-1);
 			len += check;
 		}
 		else
 		{
-			check = write(1, str, 1);
-			if (check == -1)
+			if (write(1, str, 1) == -1)
 				return (-1);
 			len++;
 		}
@@ -35,7 +46,7 @@ int	ft_printf(const char *str, ...)
 static int	checker(const char toCheck, va_list args)
 {
 	if (toCheck == 'c')
-		return(ft_putchar(va_arg(args, int)));
+		return (ft_putchar(va_arg(args, int)));
 	else if (toCheck == 'u')
 		return (ft_putnbr(va_arg(args, unsigned int)));
 	else if ((toCheck == 'i') || (toCheck == 'd'))

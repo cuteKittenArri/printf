@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arrilein <arrilein@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 20:25:33 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/24 13:17:34 by arrilein         ###   ########.fr       */
+/*   Updated: 2025/10/24 21:07:10 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 static size_t	h_digits(unsigned int n);
-static void	put_hexa(unsigned int nbr, char up);
+static void		put_hexa(unsigned int nbr, char up);
 
 int	ft_put_hex(unsigned int nbr, char up)
 {

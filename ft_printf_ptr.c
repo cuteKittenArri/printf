@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arrilein <arrilein@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 20:33:23 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/24 13:16:51 by arrilein         ###   ########.fr       */
+/*   Updated: 2025/10/24 21:07:29 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 static size_t	ptr_digits(unsigned long long n);
-static void	put_ptr(unsigned long long addr);
+static void		put_ptr(unsigned long long addr);
 
 int	ft_put_ptr(void *addr)
 {
