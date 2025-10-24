@@ -26,7 +26,7 @@ int	ft_putstr(char *s)
 	return (len);
 }
 
-int ft_putnbr(int nbr)
+int ft_putnbr(long nbr)
 {
 	int		len;
 	char	*nbr_s;
